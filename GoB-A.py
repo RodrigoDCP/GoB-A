@@ -21,26 +21,24 @@ def subdominio():
 		print(colored("Version - 1", 'green', attrs=["bold"]))
 		print(colored("GoBuster-Auto", 'magenta', attrs=["bold"]))
 		print(colored("------------------------------------------", "blue"))		
-		subdo = input(colored("Sub-Dominio: ", 'green'))
-		directorio = input(colored("Directorio: ", 'green'))
-		os.system('clear')
+		subdo = input(colored("Dominio: ", 'green'))
+		directorio = "banco/DNS/subdomains-top1million-5000.txt"
+		print("Directorio:", directorio)
+		time.sleep(1)
 		print(colored("Cargando datos...", 'yellow'))
 		time.sleep(0.5)
 		os.system('gobuster vhost -w ' + directorio + ' -u ' + subdo + ' --append-domain')
 		print(colored('''--------------------''', 'yellow'))
-		print(colored("[1]", 'magenta'), "Reiniciar")
-		print(colored("[c]", 'magenta'), "Limpiar consola")
-		print(colored("[r]", 'magenta'), "Regresar")
+		print(colored("[r]", 'magenta'), "Reiniciar")
+		print(colored("[m]", 'magenta'), "menu")
 		print(colored("------------------------------------------", "blue"))
 		opcion = input(colored("Seleccinoa una opción: ", 'green'))
 		os.system('clear')
 		
-		if opcion == "1":
+		if opcion == "r":
 			os.system('clear')
 			subdominio()
-		elif opcion == "c":
-			os.system('clear')
-		elif opcion == "r":
+		elif opcion == "m":
 			os.system('clear')
 			menu()
 
@@ -52,25 +50,23 @@ def dominio():
 		print(colored("	GoBuster-Auto", 'magenta', attrs=["bold"]))
 		print(colored("------------------------------------------", "blue"))		
 		domi = input(colored("Dominio: ", 'green'))
-		directorio = input(colored("Directorio: ", 'green'))
-		os.system('clear')
+		directorio = "banco/dirbuster/directory-list-2.3-small.txt"
+		print("Directorio:", directorio)
+		time.sleep(1)
 		print(colored("Cargando datos...", 'yellow'))
 		time.sleep(0.5)
 		os.system('gobuster dir --url ' + domi + ' --wordlist ' + directorio)
 		print(colored('''--------------------''', 'yellow'))
-		print(colored("[1]", 'magenta'), "Reiniciar")
-		print(colored("[c]", 'magenta'), "Limpiar consola")
-		print(colored("[r]", 'magenta'), "Regresar")
+		print(colored("[r]", 'magenta'), "Reiniciar")
+		print(colored("[m]", 'magenta'), "Regresar")
 		print(colored("------------------------------------------", "blue"))
 		opcion = input(colored("Seleccinoa una opción: ", 'green'))
 		os.system('clear')
 		
-		if opcion == "1":
+		if opcion == "r":
 			os.system('clear')
 			dominio()
-		elif opcion == "c":
-			os.system('clear')
-		elif opcion == "r":
+		elif opcion == "m":
 			os.system('clear')
 			menu()
 
@@ -104,6 +100,9 @@ def menu():
 		elif opcion == "2":
 			os.system('clear')
 			subdominio()
+		elif opcion == "c":
+			os.system('clear')
+			menu()
 		elif opcion == "0":
 			os.system('clear')
 			print(colored("Saliendo...", 'yellow'))

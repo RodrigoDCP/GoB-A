@@ -12,6 +12,10 @@ El programa se encuentra es fase beta y con un diseño básico con solo lo neces
 
 Proxima actualización se mejorara la interfaz, se implementaran (posiblemente) más funciones y se agilizaran los tiempos de cambio de menú.
 
+# Ultimos Cambios
+
+Se depuraron algunos errores en el cóigo, algunas opciones vacías se le agregaron funciones, se añadio un banco de directorios clásicos de Discovery y SecList, por ultimo, se añadio el directorio del vector de ataque de directorios directamente al código, evitando la necesidad de buscar el archivo para añadirlo, unicamente se solicita el dominio.
+
 # Proxima actualización
 
-Se agregaran de forma nativa bancos para busqueda de directorios, subdominion y una forma más "automatizada" para la busqueda de las mismas.
+Más funciones proximamente...
