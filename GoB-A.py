@@ -18,7 +18,7 @@ os.system('clear')
 def subdominio():
 	while True:
 		print(colored("By Cañas", 'green', attrs=["bold"]))
-		print(colored("Version - 1", 'green', attrs=["bold"]))
+		print(colored("Version - 1.1", 'green', attrs=["bold"]))
 		print(colored("GoBuster-Auto", 'magenta', attrs=["bold"]))
 		print(colored("------------------------------------------", "blue"))		
 		subdo = input(colored("Dominio: ", 'green'))
@@ -46,7 +46,7 @@ def subdominio():
 def dominio():
 	while True:
 		print(colored("	By Cañas", 'green', attrs=["bold"]))
-		print(colored("		Version - 1", 'green', attrs=["bold"]))
+		print(colored("		Version - 1.1", 'green', attrs=["bold"]))
 		print(colored("	GoBuster-Auto", 'magenta', attrs=["bold"]))
 		print(colored("------------------------------------------", "blue"))		
 		domi = input(colored("Dominio: ", 'green'))
@@ -70,6 +70,43 @@ def dominio():
 			os.system('clear')
 			menu()
 
+def dirsearchF():
+	while True:
+		print(colored("	By Cañas", 'green', attrs=["bold"]))
+		print(colored("		Version - 1.1", 'green', attrs=["bold"]))
+		print(colored("	GoBuster-Auto", 'magenta', attrs=["bold"]))
+		print(colored("------------------------------------------", "blue"))
+		print(colored("Digite su objetivo como en el ejemplo"))
+		print(colored("Ejemplo: http://google.com"))
+		print(colored("------------------------------------------", "blue"))
+		print(colored("[r]", 'yellow'), "Regresar")
+		print(" ")
+		dominio = input(colored("Objetivo: ", 'green'))
+
+		if dominio == "r":
+			os.system('clear')
+			menu()
+
+		time.sleep(1)
+		print(colored("Cargando datos...", 'yellow'))
+		time.sleep(0.5)
+		os.system('clear')
+		print(colored("------------------------------------------", "blue"))
+		os.system('dirsearch -u ' + dominio)
+		print(colored("------------------------------------------", "blue"))
+		print(colored("------------------------------------------", "blue"))
+		print(colored("[r]", 'yellow'), "Regresar")
+		print(" ")
+
+		opcion = input(colored("Seleccinoa una opción: ", 'green'))
+
+		if opcion =="r":
+			os.system('clear')
+			menu()
+		else:
+			os.system('clear')
+			menu()
+
 
 def menu():
 	while True:
@@ -82,11 +119,12 @@ def menu():
 
 ''', 'cyan', attrs=["bold"]))
 		print(colored("			By Cañas", 'green', attrs=["bold"]))
-		print(colored("				Version - 1", 'green', attrs=["bold"]))
+		print(colored("				Version - 1.1", 'green', attrs=["bold"]))
 		print(colored("GoBuster-Auto", 'magenta', attrs=["bold"]))
 		print(colored("------------------------------------------", "blue"))
 		print(colored("[1]", 'yellow'), "Dominios")
 		print(colored("[2]", 'yellow'), "SubDominios")
+		print(colored("[3]", 'yellow'), "Dirsearch")
 		print(colored('''--------------------''', 'yellow'))
 		print(colored("[c]", 'magenta'), "Limpiar consola")
 		print(colored("[0]", 'magenta'), "Salir")
@@ -100,6 +138,9 @@ def menu():
 		elif opcion == "2":
 			os.system('clear')
 			subdominio()
+		elif opcion == "3":
+			os.system('clear')
+			dirsearchF()
 		elif opcion == "c":
 			os.system('clear')
 			menu()

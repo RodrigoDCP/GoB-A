@@ -14,8 +14,8 @@ Proxima actualización se mejorara la interfaz, se implementaran (posiblemente) 
 
 # Ultimos Cambios
 
-Se depuraron algunos errores en el cóigo, algunas opciones vacías se le agregaron funciones, se añadio un banco de directorios clásicos de Discovery y SecList, por ultimo, se añadio el directorio del vector de ataque de directorios directamente al código, evitando la necesidad de buscar el archivo para añadirlo, unicamente se solicita el dominio.
+Se añadio un módulo llamado "Dirsearch" otro potente buscador de directorios en dominios, con la intención de tener una segunda opción para este tipo de vector de ataques, de momento solo cumple con la función normal de buscar directorios básicos.
 
 # Proxima actualización
 
-Más funciones proximamente...
+Más funciones para "Dirsearch", posible automatización para GoBuster
