@@ -18,10 +18,17 @@ os.system('clear')
 def subdominio():
 	while True:
 		print(colored("By Cañas", 'green', attrs=["bold"]))
-		print(colored("Version - 1.1", 'green', attrs=["bold"]))
+		print(colored("Version - 1.2", 'green', attrs=["bold"]))
 		print(colored("GoBuster-Auto", 'magenta', attrs=["bold"]))
-		print(colored("------------------------------------------", "blue"))		
+		print(colored("------------------------------------------", "blue"))	
+		print(colored("[m]", 'yellow'), "Menú")
+		print(" ")			
 		subdo = input(colored("Dominio: ", 'green'))
+
+		if subdo == "m":
+			os.system('clear')
+			menu()
+
 		directorio = "banco/DNS/subdomains-top1million-5000.txt"
 		print("Directorio:", directorio)
 		time.sleep(1)
@@ -30,7 +37,7 @@ def subdominio():
 		os.system('gobuster vhost -w ' + directorio + ' -u ' + subdo + ' --append-domain')
 		print(colored('''--------------------''', 'yellow'))
 		print(colored("[r]", 'magenta'), "Reiniciar")
-		print(colored("[m]", 'magenta'), "menu")
+		print(colored("[m]", 'magenta'), "Menú")
 		print(colored("------------------------------------------", "blue"))
 		opcion = input(colored("Seleccinoa una opción: ", 'green'))
 		os.system('clear')
@@ -46,10 +53,17 @@ def subdominio():
 def dominio():
 	while True:
 		print(colored("	By Cañas", 'green', attrs=["bold"]))
-		print(colored("		Version - 1.1", 'green', attrs=["bold"]))
+		print(colored("		Version - 1.2", 'green', attrs=["bold"]))
 		print(colored("	GoBuster-Auto", 'magenta', attrs=["bold"]))
-		print(colored("------------------------------------------", "blue"))		
+		print(colored("------------------------------------------", "blue"))
+		print(colored("[m]", 'yellow'), "Menú")
+		print(" ")		
 		domi = input(colored("Dominio: ", 'green'))
+
+		if domi == "m":
+			os.system('clear')
+			menu()
+
 		directorio = "banco/dirbuster/directory-list-2.3-small.txt"
 		print("Directorio:", directorio)
 		time.sleep(1)
@@ -58,7 +72,7 @@ def dominio():
 		os.system('gobuster dir --url ' + domi + ' --wordlist ' + directorio)
 		print(colored('''--------------------''', 'yellow'))
 		print(colored("[r]", 'magenta'), "Reiniciar")
-		print(colored("[m]", 'magenta'), "Regresar")
+		print(colored("[m]", 'magenta'), "Menú")
 		print(colored("------------------------------------------", "blue"))
 		opcion = input(colored("Seleccinoa una opción: ", 'green'))
 		os.system('clear')
@@ -73,17 +87,17 @@ def dominio():
 def dirsearchF():
 	while True:
 		print(colored("	By Cañas", 'green', attrs=["bold"]))
-		print(colored("		Version - 1.1", 'green', attrs=["bold"]))
+		print(colored("		Version - 1.2", 'green', attrs=["bold"]))
 		print(colored("	GoBuster-Auto", 'magenta', attrs=["bold"]))
 		print(colored("------------------------------------------", "blue"))
 		print(colored("Digite su objetivo como en el ejemplo"))
 		print(colored("Ejemplo: http://google.com"))
 		print(colored("------------------------------------------", "blue"))
-		print(colored("[r]", 'yellow'), "Regresar")
+		print(colored("[m]", 'yellow'), "Menú")
 		print(" ")
 		dominio = input(colored("Objetivo: ", 'green'))
 
-		if dominio == "r":
+		if dominio == "m":
 			os.system('clear')
 			menu()
 
@@ -95,12 +109,12 @@ def dirsearchF():
 		os.system('dirsearch -u ' + dominio)
 		print(colored("------------------------------------------", "blue"))
 		print(colored("------------------------------------------", "blue"))
-		print(colored("[r]", 'yellow'), "Regresar")
+		print(colored("[m]", 'yellow'), "Menú")
 		print(" ")
 
 		opcion = input(colored("Seleccinoa una opción: ", 'green'))
 
-		if opcion =="r":
+		if opcion =="m":
 			os.system('clear')
 			menu()
 		else:
@@ -119,7 +133,7 @@ def menu():
 
 ''', 'cyan', attrs=["bold"]))
 		print(colored("			By Cañas", 'green', attrs=["bold"]))
-		print(colored("				Version - 1.1", 'green', attrs=["bold"]))
+		print(colored("				Version - 1.2", 'green', attrs=["bold"]))
 		print(colored("GoBuster-Auto", 'magenta', attrs=["bold"]))
 		print(colored("------------------------------------------", "blue"))
 		print(colored("[1]", 'yellow'), "Dominios")

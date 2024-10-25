@@ -6,15 +6,26 @@ GoB-A es una herraminta complementaria para GoBuster, hecha con la intención de
 
 # Status
 
-El programa se encuentra es fase beta y con un diseño básico con solo lo necesario para escanear directorios de Dominios y Sub-dominios.
+El programa se encuentra en una fase beta pero con mejoras significativas a la primera versión lanzada.
+
+Añadidos:
+- Bibliotecas conocidas de Kali Linux.
+- Módulo Dirsearch conectada a las bibliotecas de Kali
+- Mejoras en la interfaz.
 
 # Instalation / Instalación
 
-Proxima actualización se mejorara la interfaz, se implementaran (posiblemente) más funciones y se agilizaran los tiempos de cambio de menú.
+Bajas repo:
+
+~~~
+git clone https://github.com/RodrigoDCP/GoB-A.git
+~~~
+
+(Proximamente un instalador)...
 
 # Ultimos Cambios
 
-Se añadio un módulo llamado "Dirsearch" otro potente buscador de directorios en dominios, con la intención de tener una segunda opción para este tipo de vector de ataques, de momento solo cumple con la función normal de buscar directorios básicos.
+Se realizo una mejora en el manejo de la interfaz, colocando opciones para regresar al menú principal desde los módulos Dominio, SubDominios y Dirsearch.
 
 # Proxima actualización
 
