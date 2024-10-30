@@ -88,9 +88,6 @@ def dirsearchF():
 	while True:
 		print(colored("	By Cañas", 'green', attrs=["bold"]))
 		print(colored("		Version - 1.2", 'green', attrs=["bold"]))
-		print(colored("	GoBuster-Auto", 'magenta', attrs=["bold"]))
-		print(colored("------------------------------------------", "blue"))
-		print(colored("Digite su objetivo como en el ejemplo"))
 		print(colored("Ejemplo: http://google.com"))
 		print(colored("------------------------------------------", "blue"))
 		print(colored("[m]", 'yellow'), "Menú")
